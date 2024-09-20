@@ -10,7 +10,7 @@
      
       (async () => {
         try {
-          const feedSpace = document.getElementById('isfq');
+          const feedSpace = document.getElementById('inus');
           const response = await fetch("http://localhost:3030/api/v1/posts/get");
 
           if (!response.ok) {

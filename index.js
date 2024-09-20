@@ -9,10 +9,10 @@
     
      
             
-            const name = document.getElementById('iv15t');
+            const name = document.getElementById('i0qrz');
             const image = document.getElementById('add_image');
-            const story = document.getElementById('isv0k');
-            const addButton = document.getElementById('i0t6j');
+            const story = document.getElementById('iq7s1');
+            const addButton = document.getElementById('i6n6f');
         
             function verifyInput(){
             console.log('verifyInput called');
@@ -59,7 +59,7 @@
          
       (async () => {
         try {
-          const feedSpace = document.getElementById('iafow');
+          const feedSpace = document.getElementById('iv5wj');
           const response = await fetch("http://localhost:3030/api/v1/posts/get");
 
           if (!response.ok) {

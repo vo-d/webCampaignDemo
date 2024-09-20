@@ -10,7 +10,7 @@
      
       (async () => {
         try {
-          const feedSpace = document.getElementById('i2ws');
+          const feedSpace = document.getElementById('isfq');
           const response = await fetch("http://localhost:3030/api/v1/posts/get");
 
           if (!response.ok) {
@@ -119,54 +119,5 @@
           console.error('Error:', error);
         }
       })();
-     
-            
-            const name = document.getElementById('iv3p2');
-            const image = document.getElementById('add_image');
-            const story = document.getElementById('is5w1');
-            const addButton = document.getElementById('iu3hs');
-        
-            function verifyInput(){
-            console.log('verifyInput called');
-            //   if (!verifyLinkedInPageUrlInput(linkedInPageUrlInput.value))
-            //   {
-            //     alert("Please enter a valid LinkedIn page URL");
-            //     return false;
-            //   }
-            if (name.value.trim() === ""){
-                alert("Please enter your name");
-                return false;
-            }
-            if (story.value.trim() === ""){
-                alert("Please enter your story");
-                return false;
-            }
-            return true;
-        }
-            function setTextAreaSelection() {
-            story.addEventListener("click", () => {
-                story.focus();
-                story.setSelectionRange(0, 0);
-            });
-        }
-            setTextAreaSelection()
-            addButton.addEventListener("click", () =>{
-                if (verifyInput()) {
-                    // Create FormData object to handle both text and file upload
-                    const formData = new FormData();
-                    formData.append("name", name.value);
-                    formData.append("image", image.files[0]);  // Add the image file
-                    formData.append("storytext", story.value);
-                    fetch("http://localhost:3030/api/v1/posts/add", {
-                        method: "POST",
-                        body: formData  
-                    }).then(res => {
-                        console.log("Request complete! response:", res);
-                        location.reload();
-                    }).catch(error => {
-                        console.error("Error:", error);
-                    });
-                }
-            });
-        
+    
 });
